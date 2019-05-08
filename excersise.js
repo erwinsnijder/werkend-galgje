@@ -1,4 +1,4 @@
-var words = ['', 'superman', 'batman', 'Flash','Thor', 'Shazam'];
+var words = ['superman', 'batman', 'flash', 'thor', 'shazam','wonderwoman', ];
 var game = {
   guessed: [],
   left: 12,
@@ -8,7 +8,7 @@ var game = {
     this.$right = document.getElementById('right');
     this.$wrong = document.getElementById('wrong');
     this.$remain = document.getElementById('remain');
-    this.$right.innerHTML = '_'.repeat(this.word.length);
+    this.$right.innerHTML = '*'.repeat(this.word.length);
   },
   guess: function(letter) {
     if (this.left > 0 && this.complete != true) {
@@ -27,7 +27,7 @@ var game = {
         this.$right.innerHTML = word.join('');
       }
     }
-    if (this.$right.innerHTML.indexOf('_') < 0) {
+    if (this.$right.innerHTML.indexOf('*') < 0) {
       alert('you win!');
       this.complete = true;
     }
