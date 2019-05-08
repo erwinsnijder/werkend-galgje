@@ -28,8 +28,10 @@ var game = {
       }
     }
     if (this.$right.innerHTML.indexOf('*') < 0) {
-      alert('you win!');
+        alert('you win!');
+        
       this.complete = true;
+    // $('#gewonnen').innerHtml('<span>je hebt gewonnen!</span>');;
     }
   },
   wrong: function(letter) {
