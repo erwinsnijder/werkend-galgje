@@ -31,7 +31,7 @@ var game = {
         alert('you win!');
         
       this.complete = true;
-    // $('#gewonnen').innerHtml('<span>je hebt gewonnen!</span>');;
+    // $('#gewonnen').innerHtml('<span>je hebt gewonnen!</span>');
     }
   },
   wrong: function(letter) {
@@ -42,6 +42,7 @@ var game = {
     if (this.left < 1) {
       alert('verloren! '+  this.word);
       this.complete = true;
+    //   $('#gewonnen').innerHtml('<span>je hebt verloren!</span>');
     }
   }
 };
